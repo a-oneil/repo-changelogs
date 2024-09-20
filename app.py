@@ -69,11 +69,10 @@ def git_pull_and_log_changes():
                         ):
                             changelog_file.write(f"## {date}\n")
                             for filename in filenames:
+                                if is_valid_date(filename):
+                                    continue
                                 changelog_file.write(f"- {filename}\n")
                             changelog_file.write("\n")
-
-                # Return to the original directory
-                os.chdir(current_dir)
 
 
 if __name__ == "__main__":
