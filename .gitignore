@@ -1,0 +1,5 @@
+venv/*
+repos/**
+!repos/.gitkeep
+changelogs/**
+!changelogs/.gitkeep
